@@ -1,0 +1,49 @@
+body {
+    font-family: Beaufort;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+
+  header {
+    background-color: #000000a4;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .base {
+    background-image: url('imagens/nexus.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .escolha {
+    text-align: center;
+  }
+
+  .base p {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .campeoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px ;
+    background-color: #000000;
+  }

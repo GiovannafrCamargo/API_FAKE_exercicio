@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>League of Legends</title>
+
+<link rel="stylesheet" href="personagens.css">
+
+
+<style>
+  body {
+    font-family: Beaufort;
+    margin: 10px;
+    padding: 0;
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+
+  header {
+    background-color: #000000a4;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .base {
+    background-image: url('imagens/nexus.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .fotos  {
+    text-align: center;
+  }
+
+  .escolha  {
+    text-align: center;
+  }
+
+  .base p {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .campeoes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  #dados1, #dados2, #dados3, #dados4 {
+    display: inline-block;
+  }
+
+  #dados5, #dados6, #dados7, #dados8 {
+    display: inline-block;
+  }
+
+  
+
+  footer {
+    text-align: center;
+    padding: 20px ;
+    background-color: #000000;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <header>
+    <h1><img src="imagens/barra.png" alt="" width="1500px" height="70px"></h1>
+    <p></p>
+  </header>
+
+  <div class="container">
+    <div class="base">
+      
+      <p><img src="imagens/League-of-Legends-Logo-2009-2019-removebg-preview.png" alt=""></p>
+    </div>
+      <h1>Escolha seu campeão!</h1>
+      </div> 
+
+      <div class="fotos">
+      <!--Dados de cada campeão-->
+      <div id="dados1">
+        <img src="imagens/seraphine.jpg" alt="Imagem" width="400px" onclick="mostrarDados1()">
+        <h3>Clique para mostrar dados da campeã!</h3>
+      </div>
+      
+      <div id="dados2">
+        <img src="imagens/MasterYi.jpg" alt="Imagem" width="400px" onclick="mostrarDados2()">
+        <h3>Clique para mostrar dados do campeão!</h3>
+      </div>
+
+      <div id="dados3">
+        <img src="imagens/Lux.jpg" alt="Imagem" width="400px" onclick="mostrarDados3()">
+        <h3>Clique para mostrar dados da campeã!</h3>
+      </div>
+
+      <div id="dados4">
+        <img src="imagens/Kayn.jpg" alt="Imagem" width="400px" onclick="mostrarDados4()">
+        <h3>Clique para mostrar dados do campeão!</h3>
+      </div>
+
+      <div id="dados5">
+        <img src="imagens/Xayah.jpg" alt="Imagem" width="400px" onclick="mostrarDados5()">
+        <h3>Clique para mostrar dados da campeã!</h3>
+      </div>
+
+      <div id="dados6">
+        <img src="imagens/rakan.jpg" alt="Imagem" width="400px" onclick="mostrarDados6()">
+        <h3>Clique para mostrar dados da campeão!</h3>
+      </div>
+
+      <div id="dados7">
+        <img src="imagens/Gwen.jpg" alt="Imagem" width="400px" onclick="mostrarDados7()">
+        <h3>Clique para mostrar dados da campeã!</h3>
+      </div>
+
+      <div id="dados8">
+        <img src="imagens/Jhin.jpg" alt="Imagem" width="400px" onclick="mostrarDados8()">
+        <h3>Clique para mostrar dados da campeão!</h3>
+      </div>
+    </div>
+    
+      <script>
+        //SERAPHINE
+        function mostrarDados1() {
+          const jsontime= '{"nomeCampeao": "Seraphine", "regiao": "Piltover", "lane": "Bot SUP"}';
+
+          //Verificar console
+          console.log(jsontime);
+          //Transformando em JSON - Objeto JavaScript
+          const data = JSON.parse(jsontime)
+          //Verificar console1
+          console.log(data);
+
+          //Verificar navegador - Front End
+          document.getElementById("dados1").innerHTML+=
+          "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+          "<p>Região: " +data.regiao+ "</p>" + 
+          "<p>Lane: " +data.lane+ "</p>"
+        }
+
+          //MASTER YI
+          function mostrarDados2() {
+            const jsontime= '{"nomeCampeao": "Master Yi", "regiao": "Ionia", "lane": "Jungle" }';
+          
+            //Verificar console
+            console.log(jsontime);
+            //Transformando em JSON - Objeto JavaScript
+            const data = JSON.parse(jsontime)
+            //Verificar console2
+            console.log(data);
+  
+            //Verificar navegador - Front End
+            document.getElementById("dados2").innerHTML+=
+            "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+            "<p>Região: " +data.regiao+ "</p>" + 
+            "<p>Lane: " +data.lane+ "</p>"
+          
+          }
+             //LUX
+          function mostrarDados3() {
+            const jsontime= '{"nomeCampeao": "Lux", "regiao": "Demacia", "lane": "Mid"}';
+  
+            //Verificar console
+            console.log(jsontime);
+            //Transformando em JSON - Objeto JavaScript
+            const data = JSON.parse(jsontime)
+            //Verificar console3
+            console.log(data);
+  
+            //Verificar navegador - Front End
+            document.getElementById("dados3").innerHTML+=
+            "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+            "<p>Região: " +data.regiao+ "</p>" + 
+            "<p>Lane: " +data.lane+ "</p>"
+          }
+
+             //KAYN
+          function mostrarDados4() {
+            const jsontime= '{"nomeCampeao": "Kayn", "regiao": "Noxus", "lane": "Jungle"}';
+  
+            //Verificar console
+            console.log(jsontime);
+            //Transformando em JSON - Objeto JavaScript
+            const data = JSON.parse(jsontime)
+            //Verificar console4
+            console.log(data);
+  
+            //Verificar navegador - Front End
+            document.getElementById("dados4").innerHTML+=
+            "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+            "<p>Região: " +data.regiao+ "</p>" + 
+            "<p>Lane: " +data.lane+ "</p>"
+            
+          }
+          
+          //XAYAH
+          function mostrarDados5() {
+            const jsontime= '{"nomeCampeao": "Xayah", "regiao": "Vastaya", "lane": "Bot ADC"}';
+  
+            //Verificar console
+            console.log(jsontime);
+            //Transformando em JSON - Objeto JavaScript
+            const data = JSON.parse(jsontime)
+            //Verificar console4
+            console.log(data);
+  
+            //Verificar navegador - Front End
+            document.getElementById("dados5").innerHTML+=
+            "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+            "<p>Região: " +data.regiao+ "</p>" + 
+            "<p>Lane: " +data.lane+ "</p>"
+            
+          }
+
+          //GWEN
+        function mostrarDados6() {
+          const jsontime= '{"nomeCampeao": "Rakan", "regiao": "Vastaya", "lane": "Bot SUP"}';
+
+          //Verificar console
+          console.log(jsontime);
+          //Transformando em JSON - Objeto JavaScript
+          const data = JSON.parse(jsontime)
+          //Verificar console1
+          console.log(data);
+
+          //Verificar navegador - Front End
+          document.getElementById("dados6").innerHTML+=
+          "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+          "<p>Região: " +data.regiao+ "</p>" + 
+          "<p>Lane: " +data.lane+ "</p>"
+        }
+
+          //GWEN
+        function mostrarDados7() {
+          const jsontime= '{"nomeCampeao": "Gwen", "regiao": "Camavor", "lane": "Top"}';
+
+          //Verificar console
+          console.log(jsontime);
+          //Transformando em JSON - Objeto JavaScript
+          const data = JSON.parse(jsontime)
+          //Verificar console1
+          console.log(data);
+
+          //Verificar navegador - Front End
+          document.getElementById("dados7").innerHTML+=
+          "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+          "<p>Região: " +data.regiao+ "</p>" + 
+          "<p>Lane: " +data.lane+ "</p>"
+        }
+
+        //JHIN
+        function mostrarDados8() {
+          const jsontime= '{"nomeCampeao": "Jhin", "regiao": "Ionia", "lane": "Bot ADC"}';
+
+          //Verificar console
+          console.log(jsontime);
+          //Transformando em JSON - Objeto JavaScript
+          const data = JSON.parse(jsontime)
+          //Verificar console1
+          console.log(data);
+
+          //Verificar navegador - Front End
+          document.getElementById("dados8").innerHTML+=
+          "<p>Nome do Campeão: " +data.nomeCampeao+ "</p>" + 
+          "<p>Região: " +data.regiao+ "</p>" + 
+          "<p>Lane: " +data.lane+ "</p>"
+        }
+
+      </script>
+      
+    </div>
+  </div>
+
+  <footer>
+    <h4>&copy; 2023 Jogo inspirado em League of Legends. Todos os direitos reservados.
+        <br>
+        <img src="imagens/6329a49b49c85a4a866028de7819660ad895c7c0239e2becd32969436317474f_3-removebg-preview.png" alt="" width="300px" height="300px">
+    </h4>
+    
+  </footer>
+</body>
+</html>
+
